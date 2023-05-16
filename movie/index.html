@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="head">
+
+        <div class="w">
+            <div class="logo"></div>
+            <div class="pos">
+                郑州
+                <img src="img/bd.png" alt="">
+            </div>
+            <ul class="nav">
+                <li class="nav-item act">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">电影</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">影院</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">演出</a>
+                </li>
+                <li class="nav-item">
+                    <a href="list.html">榜单</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">热点</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">商城</a>
+                </li>
+            </ul>
+            <div class="user">
+                <a href="#" class="avatar"></a>
+                <img src="img/bd.png" alt="">
+                <ul class="mine-list">
+                    <li>我的订单</li>
+                    <li class="mine-info">我的信息</li>
+                    <li class="mine-unlog">退出登录</li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="找影视剧；影人；影院">
+                <div class="icon"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="w clearfix">
+            <div class="content">
+                <div class="section now">
+                    <div class="title">
+                        正在热映
+                        <a href="list.html?type=0">全部></a>
+                    </div>
+                    <ul class="list clearfix">
+                        <!-- <li class="item">
+                            <div class="cover">
+                                <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                    alt="">
+                                <div class="cname">小丑</div>
+                            </div>
+                            <div class="buy">
+                                购票
+                            </div>
+                        </li> -->
+                        <!-- <li class="item">
+                            <div class="cover">
+                                <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                    alt="">
+                                <div class="cname">小丑</div>
+                            </div>
+                            <div class="buy">
+                                购票
+                            </div>
+                        </li> -->
+                    </ul>
+
+                </div>
+                <div class="section soon">
+                    <div class="title">
+                        即将热映
+                        <a href="list.html?type=1">全部></a>
+                    </div>
+                    <ul class="list clearfix">
+                        <!-- <li class="item">
+                            <div class="cover">
+                                <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                    alt="">
+                                <div class="cname">小丑</div>
+                            </div>
+                            <p>234人想看</p>
+                            <div class="btn">
+                                <span>预告片</span>
+                                <span>预售</span>
+                            </div>
+                            <div class="date">12月17日上映</div>
+                        </li> -->
+                    </ul>
+
+                </div>
+                <div class="section top">
+                    <div class="title">
+                        电影-top250
+                        <a href="list.html?type=2">全部></a>
+                    </div>
+                    <ul class="list clearfix">
+                        <!-- <li class="item">
+                            <div class="cover">
+                                <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                    alt="">
+                                <div class="cname">小丑</div>
+                            </div>
+                        </li> -->
+                    </ul>
+
+                </div>
+            </div>
+            <div class="aside">
+                <div class="box">
+                    <div class="title">今日票房</div>
+                    <ul class="list">
+                        <li class="item first">
+                            <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                alt="">
+                            <span class="num"></span> 航海王：红发歌姬 <span class="right">9634.66万</span>
+                        </li>
+                        <li class="item">
+                            <span class="num" style="color:#E61111;">2</span> 航海王：红发歌姬 <span class="right">963万</span>
+                        </li>
+                        <li class="item">
+                            <span class="num" style="color:#E61111;">3</span> 航海王：红发歌姬 <span class="right">63万</span>
+                        </li>
+                        <li class="item">
+                            <span class="num">4</span> 航海王：红发歌姬 <span class="right">4.66万</span>
+                        </li>
+                        <li class="item">
+                            <span class="num">5</span> 航海王：红发歌姬 <span class="right">4.66万</span>
+                        </li>
+                    </ul>
+                    <div class="info">
+                        <div class="tip">今<br>日<br>大<br>盘</div>
+                        <div class="text">
+                            12835.3万
+                            <a href="">查看更多》</a>
+                        </div>
+                        <p>北京时间 14:46:30 虫虫专业版实时票房数据</p>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        最受期待
+                        <a href="">查看完整榜单》</a>
+                    </div>
+                    <ul class="list">
+                        <li class="item one">
+                            <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                alt="">
+                            <span class="num"></span>
+                            <p style="margin-top: 50px;">航海王: 红发歌姬</p>
+                            <p>上映时间: 2022</p> <span class="right">2839376人想看</span>
+                        </li>
+                        <li class="item two" style="margin-right: 15px;">
+                            <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                alt="">
+                            <span class="num">2</span> 保你平安 <span class="right">2839376人想看</span>
+                        </li>
+                        <li class="item two">
+                            <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                alt="">
+                            <span class="num">3</span> 保你平安 <span class="right">2839376人想看</span>
+                        </li>
+                        <li class="item">
+                            <span class="num">4</span> 绝望主妇 <span class="right">2839376人想看</span>
+                        </li>
+                        <li class="item">
+                            <span class="num">5</span> 绝望主妇 <span class="right">2839376人想看</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="box">
+                    <div class="title">
+                        电影-top100
+                        <a href="">查看完整榜单》</a>
+                    </div>
+                    <ul class="list">
+                        <li class="item first">
+                            <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp"
+                                alt="">
+                            <span class="num"></span> 航海王：红发歌姬 <span class="right">9.6分</span>
+                        </li>
+                        <li class="item">
+                            <span class="num" style="color:#E61111;">2</span> 航海王：红发歌姬 <span class="right">9.6分</span>
+                        </li>
+                        <li class="item">
+                            <span class="num" style="color:#E61111;">3</span> 航海王：红发歌姬 <span class="right">9.6分</span>
+                        </li>
+                        <li class="item">
+                            <span class="num">4</span> 航海王：红发歌姬 <span class="right">9.6分</span>
+                        </li>
+                        <li class="item">
+                            <span class="num">5</span> 航海王：红发歌姬 <span class="right">9.6分</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="w">
+
+            <p>关于虫虫 : 关于我们 管理团队 投资者关系 友情链接 : 美团网 格瓦拉 美团下载 欢喜首映</p>
+            <p>商务合作邮箱：v@chongchong.com 客服电话：10665335 违法和不良信息/涉未成年人有害信息举报电话：4003456018900</p>
+            <p>用户举报/涉未成年人有害信息举报邮箱：chongchong@.com 舞弊线索举报邮箱：wubijubao@comhcomg.com</p>
+            <p>中华人民共和国增值电信业务经营许可证 京B2-20190350 营业性演出许可证 京演（机构）（2019）4094号</p>
+            <p>广播电视节目制作经营许可证 （京）字第08478号 网络文化经营许可证 京网文（2022）1334-041号</p>
+            <p>艺术品经营单位备案证明 京东艺（2022）0095号 </p>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="config.js"></script>
+    <script>
+        var token = localStorage.getItem('cctoken');
+        if (!token) {
+            // 未登录
+            $('.user .avatar').text('登录')
+            $('.user .avatar').click(function () {
+                // event.preventDefault();
+                this.href = './login.html'
+            })
+
+        } else {
+            $('.user .avatar').html(`<img src="./img/user.png" alt="" width="39px" height="39px">`)
+        }
+        // 鼠标移入显示移出不显示
+        $('.user').mouseenter(function () {
+            if (token) {
+                $('.mine-list')[0].style.display = 'block';
+            }
+        })
+        $('.user ').mouseleave(function () {
+            $('.mine-list')[0].style.display = 'none';
+        })
+        $('.mine-unlog').click(function () {
+            $('.user .avatar').text('登录');
+            localStorage.removeItem("cctoken");
+            localStorage.removeItem('imgSrc');
+        })
+        $('.mine-info').click(function () {
+            console.log('个人信息点击了');
+            location.href = './mine.html'
+        })
+        let imgSrc = localStorage.getItem('imgSrc');
+        if (imgSrc) {
+            //    console.log( JSON.stringify(imgSrc));
+            $('.user .avatar').html(`<img src="${imgSrc}" alt="" width="39px" height="39px">`)
+        }
+    </script>
+
+    <script>
+        // var path = ['/movie/in_theaters', '/movie/coming_soon', '/movie/top250']
+        // 初始化正在热映 列表
+
+
+
+        $.ajax({
+            type: "get",
+            url: host + '/movie/in_theaters',
+            data: {
+                start: 1,
+                limit: 8
+            },
+            success: function (res) {
+                console.log(res);
+                var list = res.data.list;
+                var str = ``;
+                for (var i = 0; i < list.length; i++) {
+
+                    str1 = ` 
+                 <li class="item">
+                    
+                            <div class="cover">
+                                <img src="${list[i].medium}"
+                                    alt="" onerror="reload()">
+                                <div class="cname">${list[i].title}</div>
+                            </div>
+                            <div class="buy">
+                                购票
+                            </div>
+                       
+                        </li>
+                    `;
+                    str += str1;
+                }
+
+                $(".now .list").html(str);
+
+
+            }
+        })
+        $.ajax({
+            type: "get",
+            url: host + '/movie/coming_soon',
+            data: {
+                start: 1,
+                limit: 8
+            },
+            success: function (res) {
+                console.log('即将上映', res);
+                var list = res.data.list;
+                var str = ``;
+                for (var i = 0; i < list.length; i++) {
+
+                    str1 = `
+                 <li class="item">
+                    
+                            <div class="cover">
+                                <img src="${list[i].medium}"
+                                    alt="" onerror="reload()">
+                                <div class="cname">${list[i].title}</div>
+                            </div>
+                            <p>234人想看</p>
+                            <div class="btn">
+                                <span>
+                                    <a href="./play.html?mId=${list[i].mId}"> 预告片     </a>
+                                    </span>
+                                <span>预售</span>
+                            </div>
+                            <div class="date">12月17日上映</div>
+                        </li>
+                    `;
+                    str += str1;
+                }
+
+                $('.soon .list').html(str);
+
+
+            }
+        })
+
+        $.ajax({
+            type: "get",
+            url: host + '/movie/top250',
+            data: {
+                start: 1,
+                limit: 8
+            },
+            success: function (res) {
+                console.log(res);
+                var list = res.data.list;
+                var str = ``;
+                for (var i = 0; i < list.length; i++) {
+
+                    str1 = `
+                 <li class="item">
+                    <a href="./play.html?mId=${list[i].mId}">
+                            <div class="cover">
+                                <img src="${list[i].medium}"
+                                    alt="" onerror="reload()">
+                                <div class="cname">${list[i].title}</div>
+                            </div>
+                        </a>
+                        </li>`;
+                    str += str1;
+                }
+                $('.top .list').html(str);
+            },
+
+        })
+        function reload() {
+            event.target.src = './404.png';
+        }  
+    </script>
+</body>
+
+</html>

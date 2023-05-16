@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/list.css">
+
+    <style>
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="w">
+            <div class="logo"></div>
+            <div class="pos">
+                郑州
+                <img src="img/bd.png" alt="">
+            </div>
+            <ul class="nav">
+                <li class="nav-item ">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">电影</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">影院</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">演出</a>
+                </li>
+                <li class="nav-item act">
+                    <a href="list.html">榜单</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">热点</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">商城</a>
+                </li>
+            </ul>
+            <!-- <div class="user">
+                <a href="mine.html" class="avatar"></a>
+                <img src="img/bd.png" alt="">
+                <ul class="mine-list">
+                    <li>我的订单</li>
+                    <li>我的信息</li>
+                    <li>退出登录</li>
+                </ul>
+            </div> -->
+            <div class="user">
+                <a href="" class="avatar"></a>
+                <img src="img/bd.png" alt="">
+                <ul class="mine-list">
+                    <li>我的订单</li>
+                    <li class="mine-info">我的信息</li>
+                    <li class="mine-unlog">退出登录</li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="找影视剧；影人；影院">
+                <div class="icon"></div>
+            </div>
+        </div>
+    </div>
+    <div class="top-bar">
+        <div class="w">
+            <div class="tab-list">
+                <div class="tab-item">正在上映</div>
+                <div class="tab-item">即将上映</div>
+                <div class="tab-item">top250</div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="w">
+            <div class="tip">
+                <!-- <p>2021年-12-14 已更新</p> -->
+                <p>榜单规则：将昨日国内热映的影片，按照评分从高到低列取前10名，每天上午10点更新。相关数据来源于“虫虫影视库”</p>
+            </div>
+            <ul class="list">
+                  <!-- 跳转时,携带这部电影的 mId -->
+                <!-- <li class="item">
+                    <a href="movie-detail.html?mId=32476598347">
+                        <div class="num">1</div>
+                        <div class="cover">
+                            <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2567198874.webp" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="title">放牛班的春天</div>
+                            <p class="actor">主演: </p>
+                            <p class="time">上映时间</p>
+                            <div class="rate">
+                                9.<span>6</span>
+                            </div>
+                        </div>
+
+                    </a>
+                </li> -->
+            </ul>
+            <div class="page clearfix">
+                <!-- <span class="num">1</span>
+                <span class="num">2</span>
+                <span class="num">3</span>
+                <span class="num">4</span> -->
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="w">
+
+            <p>关于虫虫 : 关于我们 管理团队 投资者关系 友情链接 : 美团网 格瓦拉 美团下载 欢喜首映</p>
+            <p>商务合作邮箱：v@chongchong.com 客服电话：10665335 违法和不良信息/涉未成年人有害信息举报电话：4003456018900</p>
+            <p>用户举报/涉未成年人有害信息举报邮箱：chongchong@.com 舞弊线索举报邮箱：wubijubao@comhcomg.com</p>
+            <p>中华人民共和国增值电信业务经营许可证 京B2-20190350 营业性演出许可证 京演（机构）（2019）4094号</p>
+            <p>广播电视节目制作经营许可证 （京）字第08478号 网络文化经营许可证 京网文（2022）1334-041号</p>
+            <p>艺术品经营单位备案证明 京东艺（2022）0095号 </p>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery.min.js"></script>
+<script src="./config.js"></script>
+<script>
+    var token = localStorage.getItem('cctoken');
+    if (!token) {
+        // 未登录
+        $('.user .avatar').text('登录')
+        $('.user .avatar').click(function () {
+            console.log(333);
+            //  location.href = 'login.html'
+            this.href = './login.html'
+        })
+
+    } else{
+        $('.user .avatar').html(`<img src="./img/user.png" alt="" width="39px" height="39px">`)
+    }
+// 鼠标移入显示移出不显示
+    $('.user ').mouseenter(function(){
+        if(token){
+         $('.mine-list')[0].style.display='block';
+        }
+    })
+    $('.user ').mouseleave(function(){
+        if(token){
+         $('.mine-list')[0].style.display='none';
+        }
+    })
+    $('.mine-unlog').click(function(){
+        $('.user .avatar').text('登录');
+        localStorage.removeItem("cctoken");
+        localStorage.removeItem('imgSrc');
+    })
+    $('.mine-info').click(function(){
+        console.log('个人信息点击了');
+        location.href='./mine.html'
+    })
+
+    let imgSrc=localStorage.getItem('imgSrc');
+        if(imgSrc){
+        //    console.log( JSON.stringify(imgSrc));
+            $('.user .avatar').html(`<img src="${imgSrc}" alt="" width="39px" height="39px">`)
+        }
+</script>
+    <script>
+        // 获取榜单类型 (在url中)
+        // 0:正在上映
+        // 1:即将上映
+        // 2:top250
+        // var host = 'http://localhost:3000';
+        var path = ['/movie/in_theaters', '/movie/coming_soon', '/movie/top250']
+        // console.log(location.search);
+        var type = location.search.slice(1).split("=")[1] || 0;
+        $('.tab-item').eq(type).addClass('act');
+       
+        // 1发送请求,初始化榜单
+        request($('.tab-list .act').index(),1)
+ // 2 tab的点击事件
+ $(".tab-item").click(function(){
+    $(this).addClass('act').siblings().removeClass('act');
+    request($('.tab-list .act').index(),1)
+ })
+  //3 分页的点击事件 (事件委托)
+  $('.page').on('click', 'span', function () {
+
+request($('.tab-list .act').index(),$(this).text(),);
+})
+   //4 封装函数,根据请求接口,获取相应数据并渲染页面
+        // url ,start, limit
+        function request(index,num){
+        $.ajax({
+            type: "get",
+            url: host + path[index],
+            data: {
+                start: num,
+                limit: 8
+            },
+            success: function (res) {
+                console.log(res);
+                var list = res.data.list;
+                console.log(list);
+                var str = ``;
+                // 1渲染整页
+                for (var i = 0; i < list.length; i++) {
+                    // console.log(1);
+                    let str1=`<li class="item">
+                    <a href="movie-detail.html?mId=${list[i].mId}">
+                        <div class="num">${i+1}</div>
+                        <div class="cover">
+                            <img src="${list[i].medium}" alt="" onerror="reload()">
+                        </div>
+                        <div class="info">
+                            <div class="title">${list[i].title}</div>
+                            <p class="actor">主演:${list[i].director} </p>
+                            <p class="time">上映时间${list[i].show_date}</p>
+                            <div class="rate">
+                                ${list[i].rating_average.split('.')[0]}.<span> ${list[i].rating_average.split('.')[1]}</span>
+                            </div>
+                        </div>
+
+                    </a>
+                </li>`;
+                   str+=str1;
+                }
+                $('.w .list').html(str);
+            //   2渲染分页器
+            let str2 = '';
+          
+                    for (let i = 1;i < res.data.totalPage; i++) {
+                        console.log(2);
+                        str2 += `<span class="num">${i}</span>`;
+                    }
+                    $('.page').html(str2);
+                    $('.page span').eq(res.data.pageNumber - 1).addClass('act');
+            }
+        })
+       
+    }
+    function reload() {
+            event.target.src = './404.png';
+        }  
+       
+
+       
+       
+
+
+
+
+       
+        
+
+    </script>
+</body>
+
+</html>

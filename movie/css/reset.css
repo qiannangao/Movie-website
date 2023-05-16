@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #717171;
+}
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 22px;
+}
+.clearfix::after{
+    display: block;
+    content: '';
+    clear: both;
+}

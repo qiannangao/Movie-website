@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .main{
+            width: 100%;
+            padding-top: 45px;
+            background-color: #26282C;
+        }
+        .box{
+            float: left;
+            width: 730px;
+            /* height: 456px; */
+        }
+        .box video{
+            width: 730px;
+            height:456px;
+        }
+        .box .title{
+            margin-top: 23px;
+            font-size: 24px;
+            color: #f8f8f8;
+            font-weight: bold;
+            line-height: 33px;
+        }
+        .box .info{
+            color: #f7f7f7;
+            margin-top: 21px;
+            font-weight: bold;
+            margin-top: 21px;
+        }
+        .list{
+            width: 444px;
+            height: 643px;
+            overflow: auto;
+            box-sizing: border-box;
+            padding: 11px;
+            float: right;
+            background-color: #1B1C1E;
+        }
+        .list p{
+            color: #f8f8f8;
+            font-weight: bold;
+        }
+        .list video{
+            width: 138px;
+            height: 78px;
+            margin: 11px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="w clearfix">
+            <div class="box">
+                <video src="" controls ></video>
+                <div class="title"></div>
+                <div class="info"></div>
+            </div>
+            <div class="list">
+                <!-- <p>相关视频()</p>
+                <video src=""></video> -->
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="w">
+            <p>关于虫虫 : 关于我们 管理团队 投资者关系 友情链接 : 美团网 格瓦拉 美团下载 欢喜首映</p>
+            <p>商务合作邮箱：v@chongchong.com 客服电话：10665335 违法和不良信息/涉未成年人有害信息举报电话：4003456018900</p>
+            <p>用户举报/涉未成年人有害信息举报邮箱：chongchong@.com 舞弊线索举报邮箱：wubijubao@comhcomg.com</p>
+            <p>中华人民共和国增值电信业务经营许可证 京B2-20190350 营业性演出许可证 京演（机构）（2019）4094号</p>
+            <p>广播电视节目制作经营许可证 （京）字第08478号 网络文化经营许可证 京网文（2022）1334-041号</p>
+            <p>艺术品经营单位备案证明 京东艺（2022）0095号 </p>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var midVal = location.search.slice(1).split("=")[1];
+        $.ajax({
+            type:'get',
+            url:"http://localhost:3000/movie/findPreviewByMid",
+            data:{
+                mId:midVal
+            },
+            success:function(res){
+                console.log(res)
+                var videoList = res.data.video;
+                // 渲染预告片列表
+                var str = `<p>相关视频(${videoList.length})</p>`;
+                for(var i = 0;i<videoList.length;i++){
+                    str+=`<video src="${videoList[i]}"  autoplay></video>`
+                }
+                $('.main .list').html(str);
+                $('.main .box video').attr('src',videoList[0])
+            }
+        })
+        $.ajax({
+            type:'get',
+            url:'http://localhost:3000/movie/subject',
+            data:{
+                mId:midVal
+            },
+            success:function(res){
+                console.log(res)
+                $('.box .title').text(res.data.title)
+                $('.box .info').text(res.data.show_date +`    `+ res.data.genres)
+            }
+        })
+
+        $('.list').on('click','video',function(){
+            var src = $(this).attr('src')
+            $('.box video').attr('src',src)
+        })
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <!-- 引入 bootstrap -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mine.css">
+    <title>个人中心</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="head">
+
+        <div class="w">
+            <div class="logo"></div>
+            <div class="pos">
+                郑州
+                <img src="img/bd.png" alt="">
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">电影</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">影院</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">演出</a>
+                </li>
+                <li class="nav-item">
+                    <a href="list.html">榜单</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">热点</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">商城</a>
+                </li>
+            </ul>
+            <!-- <div class="user">
+                <a href="mine.html" class="avatar"></a>
+                <img src="img/bd.png" alt="">
+                <ul class="mine-list">
+                    <li>我的订单</li>
+                    <li>我的信息</li>
+                    <li>退出登录</li>
+                </ul>
+            </div> -->
+            <div class="user">
+                <a href="" class="avatar">
+                    <!-- <img src="img/user.png" alt=""> -->
+                </a>
+                <img src="img/bd.png" alt="">
+                <ul class="mine-list">
+                    <li>我的订单</li>
+                    <li class="mine-info">我的信息</li>
+                    <li class="mine-unlog">退出登录</li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="找影视剧；影人；影院">
+                <div class="icon"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-c clearfix">
+            <div class="side">
+                <div class="title">个人中心</div>
+                <div>
+                    <div class="tab-item">基本信息</div>
+                    <div class="tab-item">我的收藏</div>
+                    <div class="tab-item">我的评论</div>
+                    <div class="tab-item">用户管理</div>
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="con-title"></div>
+                <div class="con-list">
+                    <!-- 根据用户选择的tab导航,切换这一部分内容 -->
+                    <!-- 基本信息 -->
+                    <div class="con info" style="display: none;">
+                        <div class="bg">
+                            <img src="" class="img-rounded" alt="">
+                            <label for="file-avatar" class="btn">更换头像</label>
+                            <input type="file" id="file-avatar" style="display: none;">
+                            <span>
+                                图片支持jpg ;jpeg;png格式
+                                且小于1mb
+                            </span>
+                        </div>
+
+                        <!-- 表单 -->
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="username" class="col-sm-2 control-label">用户名</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="username" disabled placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nickname" class="col-sm-2 control-label">昵称</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="nickname" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label">性别</label>
+                                <div class="col-sm-10">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="sex" id="men" value="0">
+                                        男
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="sex" id="woman" value="1">
+                                        女
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday" class="col-sm-2 control-label">生日</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="birthday" type="date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd" class="col-sm-2 control-label">密码</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="pwd" placeholder="">
+                                    <div class="eye">
+                                        <!-- <img src="./img/eyeopen.png" alt="" width="25px" height="25px"> -->
+                                        <img src="./img/eyeclose.png" alt="" width="25px" height="25px">
+                                    </div>
+                                    <span class="changepwd">修改密码</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tel" class="col-sm-2 control-label">电话</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="tel" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sign" class="col-sm-2 control-label">个性签名</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="sign" placeholder="20个字以内">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <div class="save">保存</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="mask" >
+                    <div class="center">
+                    <p class="title">修改密码</p>
+                    <input type="password" placeholder="请输入原密码" >
+                    <input type="password" placeholder="请输入新密码" >
+                    <input type="password" placeholder="请输入新密码" >
+                    <button class="pwd-btn">修改</button>
+                    </div> -->
+                </div>
+                <!-- 收藏 -->
+                <div class="con collect" style="display: none;">
+                    <ul class="list">
+                        <li class="item">
+                            <div class="top">
+                                2022-12-18
+                                <span class="del-icon"></span>
+                            </div>
+                            <div class="text clearfix">
+                                <img src="" alt="">
+                                <div class="cname">奇迹笨小孩</div>
+                                <p>主演：萨姆·沃辛顿,佐伊·索尔达娜,米歇尔·罗德里格兹</p>
+                                <p>上映时间：2021-10-10</p>
+                                <a href="">查看详情</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="page">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </div>
+                </div>
+                <!-- 评论 -->
+                <div class="con discuss" style="display: none;">
+                    <ul class="list">
+                        <li class="item">
+                            <div class="top">
+                                奇迹笨小孩
+                                <span class="del-icon"></span>
+                            </div>
+                            <div class="text clearfix">
+                                <img src="" alt="">
+                                <div class="date">
+                                    2022-12-28
+                                    <div class="rate">
+                                        <img src="img/star.png" alt="">
+                                        <img src="img/star.png" alt="">
+                                        <img src="img/star.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    我认为这是一部跟摔跤吧爸爸同层次的电影，忍到最后还是会流泪。生命很坚强也很脆弱，命与药的关系就是这么赤裸裸。（不良厂商做药设天价，没有良心，不合理，但是这在世界都是完全合法的，决定用这个药来牟取暴利还是济世度人是药商自己的权利，毕竟药是他们研发的。）之前刚看完在这里说不良厂商，还是刚看完有些不清醒了，其实不论他们的主观意愿是什么，都是他们的成果给了病人选择的希望。国家政府会把药纳入医保、发展制度、免除关税来降低病人的压力，我们个人也应该为诸如此类的研发事业做出贡献，比如为医学难题做出重大突破，等等各行各业，才能将未来将好东西做到平价(
+                                    ¯ᒡ̱¯ )و
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="page">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </div>
+                </div>
+                <!-- 管理 -->
+                <div class="con admin" style="display: none;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>头像</th>
+                                <th>用户名</th>
+                                <th>密码</th>
+                                <th>昵称</th>
+                                <th>性别</th>
+                                <th>电话</th>
+                                <th>添加时间</th>
+                                <th>是否可用</th>
+                                <th>删除</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="img/avatar.png" alt="" class="img-circle avatar"></td>
+                                <td>admin</td>
+                                <td>123456</td>
+                                <td>chongc</td>
+                                <td>男</td>
+                                <td>12345678901</td>
+                                <td>2022-4-5</td>
+                                <td><input type="checkbox" value=""></td>
+                                <td><img src="img/del.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="img/avatar.png" alt="" class="img-circle avatar"></td>
+                                <td>admin</td>
+                                <td>123456</td>
+                                <td>chongc</td>
+                                <td>男</td>
+                                <td>12345678901</td>
+                                <td>2022-4-5</td>
+                                <td><input type="checkbox" value=""></td>
+                                <td><img src="img/del.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="img/avatar.png" alt="" class="img-circle avatar"></td>
+                                <td>admin</td>
+                                <td>123456</td>
+                                <td>chongc</td>
+                                <td>男</td>
+                                <td>12345678901</td>
+                                <td>2022-4-5</td>
+                                <td><input type="checkbox" value=""></td>
+                                <td><img src="img/del.png" alt=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="page">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="foot">
+        <div class="w">
+
+            <p>关于虫虫 : 关于我们 管理团队 投资者关系 友情链接 : 美团网 格瓦拉 美团下载 欢喜首映</p>
+            <p>商务合作邮箱：v@chongchong.com 客服电话：10665335 违法和不良信息/涉未成年人有害信息举报电话：4003456018900</p>
+            <p>用户举报/涉未成年人有害信息举报邮箱：chongchong@.com 舞弊线索举报邮箱：wubijubao@comhcomg.com</p>
+            <p>中华人民共和国增值电信业务经营许可证 京B2-20190350 营业性演出许可证 京演（机构）（2019）4094号</p>
+            <p>广播电视节目制作经营许可证 （京）字第08478号 网络文化经营许可证 京网文（2022）1334-041号</p>
+            <p>艺术品经营单位备案证明 京东艺（2022）0095号 </p>
+        </div>
+    </div>
+
+    <div class="mask">
+        <div class="center">
+            <div class="title">修改密码</div>
+            <input type="text" class="form-control" placeholder="原密码">
+            <input type="text" class="form-control" placeholder="请输入新密码">
+            <input type="text" class="form-control pwd-save" placeholder="请确认新密码">
+            <button class="pwd-btn">修改</button>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./config.js"></script>
+    <script>
+        var token = localStorage.getItem('cctoken');
+        if (!token) {
+            // 未登录
+            $('.user .avatar').text('登录')
+            $('.user .avatar').click(function () {
+                console.log(333);
+                this.href = './login.html'
+            })
+
+        } else {
+        //    登录
+           $('.avatar').html(`<img src="img/user.png" alt="">`);
+         
+        }
+        // 鼠标移入显示移出不显示
+        $('.user ').mouseenter(function () {
+            if (token) {
+                $('.mine-list')[0].style.display = 'block';
+            }
+        })
+        $('.user ').mouseleave(function () {
+            if (token) {
+                $('.mine-list')[0].style.display = 'none';
+            }
+        })
+        $('.mine-unlog').click(function () {
+            $('.user .avatar').text('登录');
+            localStorage.removeItem("cctoken");
+        })
+        $('.mine-info').click(function () {
+            console.log('个人信息点击了');
+            location.href = './mine.html'
+        })
+    </script>
+    <script>
+
+        // 获取个人中心类型
+        // 0 基本信息
+        // 1 收藏
+        // 2 评论
+        // 3 用户管理
+        var type = location.search.slice(1).split("=")[1] || 0;
+        $('.tab-item').eq(type).addClass('act');
+        $('.con-title').text($('.tab-item.act').text());
+        $('.content .con').eq(type).css('display', 'block')
+
+        // 点击导航, 获取激活导航索引
+        $('.tab-item').click(function () {
+            $('.con-title').text($(this).text());
+            $(this).addClass('act').siblings().removeClass('act')
+            var idx = $(this).index();
+            console.log(idx)
+            $('.content .con').eq(idx).css('display', 'block').siblings().css('display', 'none');
+        })
+
+
+        // 功能1:初始化渲染 实现个人基本信息的展示
+       $.ajax({
+        type:'get',
+        url:host+'/user/getUserInfo',
+            headers:{
+                Authorization: 'Bearer '+localStorage.getItem('cctoken') 
+            },
+            success:function(res){
+                console.log(res);
+            }
+    })
+        // 功能2: 实现 个人基本信息的更新
+       
+        // 功能3: 实现密码的修改
+      
+        // 功能4: 实现头像的上传
+        $('#file-avatar').on('change', function () {
+            // localStorage.removeItem('imgSrc')
+            // 获取到选中的文件
+            console.log(this.files);
+            var file = this.files[0];
+            // 发送给服务器,进行图像上传
+            var fd = new FormData()
+            fd.append('file', file)
+            $.ajax({
+                type: 'post',
+                url: host + '/user/uploadAvatar',
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.getItem('cctoken')
+                },
+                contentType: false, // 根据类型自由设定
+                processData: false, // 关闭格式化参数
+                data: fd,
+                success: function (res) {
+                    if (res.success) {
+                        console.log('头像上传成功');
+                       
+                        // 回显头像 res.data.avatar  头像在服务器的地址
+                        // $('.bg .img-rounded').attr('src', host + res.data.avatar)
+
+                        // localStorage.setItem('imgSrc', host + res.data.avatar)
+
+
+                    }
+                }
+            })
+        })
+
+    </script>
+    
+</body>
+
+</html>
