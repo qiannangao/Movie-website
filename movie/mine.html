@@ -391,7 +391,7 @@
         // 功能1:初始化渲染 实现个人基本信息的展示
         $.ajax({
             type: 'get',
-            url: host + '/api/douban/user/getUserInfo',
+            url: host + '/user/getUserInfo',
             headers: {
                 Authorization: 'Bearer ' + localStorage.getItem('cctoken')
             },
@@ -432,7 +432,7 @@
         $('.save').click(function () {
             $.ajax({
                 type: 'post',
-                url: host + '/api/douban/user/updateUserInfo',
+                url: host + '/user/updateUserInfo',
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('cctoken')
                 },
@@ -497,7 +497,7 @@
             fd.append('file', file)
             $.ajax({
                 type: 'post',
-                url: host + '/api/douban/user/uploadAvatar',
+                url: host + '/user/uploadAvatar',
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('cctoken')
                 },

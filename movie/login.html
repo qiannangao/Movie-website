@@ -128,7 +128,7 @@
                 if (userflag && pwdflag) {
                     $.ajax({
                         type: 'post',
-                        url: host + '/api/doban/user/register',
+                        url: host + '/user/register',
                         data: {
                             username: user,
                             password: pwd
@@ -141,7 +141,7 @@
                                 // 注册成功返回首页并显示登录好的图片
                                 $.ajax({
                                     type: 'post',
-                                    url: host + '/api/douban/user/login',
+                                    url: host + '/user/login',
                                     data: {
                                         username: user,
                                         password: pwd
@@ -182,7 +182,7 @@
                     console.log(1);
                     $.ajax({
                         type: 'post',
-                        url: host + '/api/douban/user/login',
+                        url: host + '/user/login',
                         data: {
                             username: user,
                             password: pwd

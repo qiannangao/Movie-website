@@ -1,1 +1,1 @@
-var host = 'http://www.bufantec.com';
+var host = 'http://www.bufantec.com/api/douban';

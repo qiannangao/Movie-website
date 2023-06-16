@@ -179,7 +179,7 @@
         // 1:即将上映
         // 2:top250
         // var host = 'http://localhost:3000';
-        var path = ['/api/douban/movie/in_theaters', '/api/douban/movie/coming_soon', '/api/douban/movie/top250']
+        var path = ['/movie/in_theaters', '/movie/coming_soon', '/movie/top250']
         // console.log(location.search);
         var type = location.search.slice(1).split("=")[1] || 0;
         $('.tab-item').eq(type).addClass('act');
