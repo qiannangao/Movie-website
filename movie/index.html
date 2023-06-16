@@ -289,7 +289,7 @@
 
         $.ajax({
             type: "get",
-            url: host + '/movie/in_theaters',
+            url: host + '/api/douban/movie/in_theaters',
             data: {
                 start: 1,
                 limit: 8
@@ -324,7 +324,7 @@
         })
         $.ajax({
             type: "get",
-            url: host + '/movie/coming_soon',
+            url: host + '/api/douban/movie/coming_soon',
             data: {
                 start: 1,
                 limit: 8
@@ -364,7 +364,7 @@
 
         $.ajax({
             type: "get",
-            url: host + '/movie/top250',
+            url: host + '/api/douban/movie/top250',
             data: {
                 start: 1,
                 limit: 8

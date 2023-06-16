@@ -255,7 +255,7 @@
         // 根据mid请求预告片
         $.ajax({
             type:'get',
-            url:host+'/movie/findPreviewByMid',
+            url:host+'/api/douban/movie/findPreviewByMid',
             data:{
                 mId:midVal
             },
@@ -281,7 +281,7 @@
         // 根据 mid 请求电影详情
         $.ajax({
             type: "get",
-            url: host + '/movie/subject',
+            url: host + '/api/douban/movie/subject',
             data: {
                 mId: midVal
             },
